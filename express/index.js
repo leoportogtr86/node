@@ -8,12 +8,30 @@ const app = express()
 app.get('/', (req, res)=>{
 
 
-    res.send({msg: "estamos online"})
+    res.send({msg: "home"})
 
 
 
 })
 
+app.get('/rota1', (req, res)=>{
+
+    res.send({msg: "rota 1"})
+})
+
+
+app.get('/rota2', (req, res)=>{
+
+    res.send({msg: "rota 2"})
+})
+
+
+
+
+app.get('/rota3', (req, res)=>{
+
+    res.send({msg: "rota 3"})
+})
 
 
 
