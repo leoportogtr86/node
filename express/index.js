@@ -65,7 +65,10 @@ app.get('/rota3', (req, res)=>{
 })
 
 
+app.get ("/cadastro", (req, res)=>{
 
+    res.send("Query params " + req.query['nome'])
+})
 
 
 
