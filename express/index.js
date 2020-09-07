@@ -14,9 +14,28 @@ app.get('/', (req, res)=>{
 
 })
 
-app.get('/rota1', (req, res)=>{
+//passando parametro opcional para a url
 
-    res.send({msg: "rota 1"})
+app.get('/rota1/:parametro?', (req, res)=>{
+
+    res.send({msg: "rota 1 => " + req.params.parametro})
+
+    let parametro = req.params.parametro
+
+
+    //checando a existencia do parametro
+
+    if (parametro){
+
+
+        console.log("parâmetro foi setado => " + parametro)
+   
+    } else {
+
+        console.log("parâmetro não setado")
+    }
+
+
 })
 
 
