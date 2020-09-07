@@ -25,6 +25,18 @@ app.get('/rota2', (req, res)=>{
     res.send({msg: "rota 2"})
 })
 
+app.get("/ola/:nome/:idade", (req, res)=>{
+
+    //req => dados enviados pelo usuario
+    //res resposta dada pelo servidor
+
+    //req.params... meio de acessar os dados enviados pelo usuário
+
+    let nome = req.params.nome
+    let idade = req.params.idade
+
+    res.send(`Olá, ${nome}, você tem ${idade} anos.`)
+})
 
 
 
