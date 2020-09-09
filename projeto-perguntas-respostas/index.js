@@ -7,7 +7,14 @@ app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
 
-    res.render('index')
+    let nome = "Leo Porto"
+    let idade = 34
+
+    res.render('index', {
+
+        nome: nome,
+        idade: idade
+    })
 })
 
 app.get('/home', (req, res)=>[
