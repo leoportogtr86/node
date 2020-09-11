@@ -5,31 +5,33 @@ const app = express()
 app.set('view engine', 'ejs')
 
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
 
     let nome = "Leo Porto"
     let idade = 34
+    let x = 1
 
     res.render('index', {
 
         nome: nome,
-        idade: idade
+        idade: idade,
+        numero: x
     })
 })
 
-app.get('/home', (req, res)=>[
+app.get('/home', (req, res) => [
 
     res.render('home')
 ])
 
 
 
-app.listen (3000, (err)=>{
+app.listen(3000, (err) => {
 
-    if (err){
+    if (err) {
 
         console.log(err)
-    
+
     } else {
 
         console.log('online na porta 3000')
