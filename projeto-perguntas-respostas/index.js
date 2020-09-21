@@ -6,6 +6,7 @@ app.use(cors())
 
 //definindo qual motor de renderizacao iremos usar
 app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
 
 app.get('/', (req, res) => {
