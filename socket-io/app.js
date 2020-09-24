@@ -8,8 +8,21 @@ app.set('view engine', 'ejs')
 
 io.on('connection', socket => {
 
-    console.log(socket)
-    console.log(socket.id)
+    socket.on('mensagem', data => {
+
+        console.log(data)
+    })
+
+    socket.on('texto', data => {
+
+        console.log(data)
+    })
+
+    socket.on('texto', data => {
+
+        console.log(data)
+
+    })
 })
 
 
