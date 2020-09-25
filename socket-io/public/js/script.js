@@ -20,9 +20,6 @@ socket.on('resposta', data => {
     chat.append(p)
 
 
-
-
-
 })
 
 
