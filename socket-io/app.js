@@ -9,9 +9,10 @@ app.set('view engine', 'ejs')
 io.on('connection', socket => {
 
 
-    socket.on('msg', socket => {
+    socket.on('msg', data => {
 
-        console.log(socket)
+        console.log(data)
+        socket.emit('resposta', data)
     })
 
 
