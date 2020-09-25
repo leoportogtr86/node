@@ -9,6 +9,12 @@ app.set('view engine', 'ejs')
 io.on('connection', socket => {
 
 
+    socket.on('msg', socket => {
+
+        console.log(socket)
+    })
+
+
     //tratando a desconexao no backend
     socket.on('disconnect', () => {
 
