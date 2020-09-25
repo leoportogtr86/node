@@ -21,3 +21,17 @@ socket.on('resposta', socket => {
     console.log(socket)
     resposta.innerHTML = socket
 })
+
+let botao2 = document.getElementById('botao2')
+let msg2 = document.getElementById('msg2')
+let texto2 = document.getElementById('texto2')
+
+botao2.onclick = () => {
+
+    socket.emit('mensagem2', msg2.value)
+}
+socket.on('resposta2', socket => {
+
+    console.log(socket)
+    texto2.innerHTML = socket
+})

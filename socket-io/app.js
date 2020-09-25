@@ -25,6 +25,11 @@ io.on('connection', socket => {
 
     })
 
+    socket.on('mensagem2', data => {
+
+        socket.emit('resposta2', data + ' - resposta 2')
+    })
+
 
 })
 
