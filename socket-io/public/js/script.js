@@ -9,6 +9,23 @@ let msgField = document.getElementById('msg')
 let userField = document.getElementById('user')
 let btnEnviar = document.getElementById('enviar')
 
+
+
+socket.on('resposta', data => {
+
+    let chat = document.getElementById('chat')
+    let p = document.createElement('p')
+    console.log(data)
+    p.innerHTML = data.user + ' : ' + data.msg
+    chat.append(p)
+
+
+
+
+
+})
+
+
 btnEnviar.onclick = function() {
 
     let msg = msgField.value
