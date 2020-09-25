@@ -18,11 +18,14 @@ io.on('connection', socket => {
         console.log(data)
     })
 
-    socket.on('texto', data => {
+    socket.on('input', data => {
 
         console.log(data)
+        socket.emit('resposta', data + ' - resposta do backend')
 
     })
+
+
 })
 
 

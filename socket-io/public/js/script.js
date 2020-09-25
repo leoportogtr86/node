@@ -15,3 +15,8 @@ btn.onclick = function() {
     socket.emit('input', texto.value)
 
 }
+
+socket.on('resposta', socket => {
+
+    console.log(socket)
+})
