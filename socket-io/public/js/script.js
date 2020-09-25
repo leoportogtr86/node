@@ -2,7 +2,7 @@ console.log('hello world')
 
 let socket = io('http://localhost:3000/')
 
-socket.emit('mensagem', { msg: "olá pessoal" })
+socket.emit('mensagem', "Olá, estamos conectados")
 
 let resposta = document.getElementById('resposta')
 
@@ -34,4 +34,12 @@ socket.on('resposta2', socket => {
 
     console.log(socket)
     texto2.innerHTML = socket
+})
+
+
+//criando evento de desconexao
+
+socket.on('disconnect', () => {
+
+    console.log('desconectado')
 })
