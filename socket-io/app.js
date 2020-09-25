@@ -12,7 +12,10 @@ io.on('connection', socket => {
     socket.on('msg', data => {
 
         console.log(data)
-        socket.emit('resposta', data)
+
+        //emitindo a mensagem globalmente
+        //todos os clientes conectados irao receber
+        io.emit('resposta', data)
     })
 
 
