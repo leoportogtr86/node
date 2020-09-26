@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const multer = require('multer')
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -10,7 +11,7 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.post('/upado', (req, res) => {
+app.post('/upload', (req, res) => {
 
     res.send('Arquivo enviado!')
 })
