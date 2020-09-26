@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 app.post('/upload', upload.single('file'), (req, res) => {
 
-    res.send('Arquivo enviado!')
+    res.render('upload')
 })
 
 
