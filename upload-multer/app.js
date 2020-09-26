@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+app.post('/upado', (req, res) => {
+
+    res.send('Arquivo enviado!')
+})
+
 
 
 app.listen(3000, () => {
