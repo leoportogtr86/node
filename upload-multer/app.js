@@ -7,7 +7,7 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
 
-    console.log('hello multer')
+    res.render('index')
 })
 
 
