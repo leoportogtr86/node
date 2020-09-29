@@ -1,7 +1,4 @@
-//importacao da lib
-const pdf = require('html-pdf')
-
-let html = `<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -16,7 +13,7 @@ let html = `<!doctype html>
 </head>
 
 <body>
-    <h1 class="text-danger">Hello, HTML-PDF!</h1>
+    <h1 class="text-center text-danger">Hello, HTML-PDF!</h1>
     <p>Aqui temos um texto em html com bootstrap que será escrito num pdf.</p>
 
     <!-- Optional JavaScript -->
@@ -26,20 +23,4 @@ let html = `<!doctype html>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
-</html>`
-
-
-//texto a ser escrito          caminho onde sera salvo   callback
-pdf.create(html, {}).toFile('./data/meupdf.pdf', (err, res) => {
-
-    if (err) {
-
-        console.log(err)
-
-
-    } else {
-
-        console.log(res)
-        console.log('pdf gerado')
-    }
-})
+</html>
