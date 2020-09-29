@@ -1,5 +1,6 @@
 //importacao da lib
 const pdf = require('html-pdf')
+const ejs = require('ejs')
 
 let html = `<!doctype html>
 <html lang="en">
