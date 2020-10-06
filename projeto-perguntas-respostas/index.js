@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const consign = require('consign')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.use(cors())
 
 //definindo qual motor de renderizacao iremos usar
@@ -10,7 +14,7 @@ app.use(express.static('public'))
 
 consign()
 
-.include('routes')
+    .include('routes')
     .into(app)
 
 
