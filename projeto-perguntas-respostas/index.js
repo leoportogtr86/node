@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 const consign = require('consign')
 const bodyParser = require('body-parser')
+const con = require('./database/database')
 
 //config do body-parser
 app.use(bodyParser.urlencoded({ extended: false }))
