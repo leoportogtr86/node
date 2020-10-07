@@ -4,6 +4,7 @@ const cors = require('cors')
 const consign = require('consign')
 const bodyParser = require('body-parser')
 const con = require('./database/database')
+const perguntaModel = require('./database/models/pergunta')
 
 
 //teste de conexao 
