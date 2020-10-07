@@ -5,6 +5,17 @@ const consign = require('consign')
 const bodyParser = require('body-parser')
 const con = require('./database/database')
 
+
+//teste de conexao 
+con.authenticate().then(()=>{
+
+    console.log('conectado ao mysql')
+
+}).catch((err)=>{
+
+    console.log(`Erro: ${err}`)
+})
+
 //config do body-parser
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
