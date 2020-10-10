@@ -1,6 +1,14 @@
 const express = require('express')
-
 const app = express()
+
+const consign = require('consign')
+
+consign()
+    .then('./config/middlewares.js')
+    .into(app)
+
+
+
 
 app.get('/', (req, res) => {
 
