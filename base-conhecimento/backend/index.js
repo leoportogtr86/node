@@ -4,6 +4,8 @@ const db = require('./config/db')
 
 const consign = require('consign')
 
+app.db = db
+
 consign()
     .then('./config/middlewares.js')
     .then('./api')
