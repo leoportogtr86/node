@@ -5,7 +5,10 @@ const consign = require('consign')
 
 consign()
     .then('./config/middlewares.js')
+    .then('./api')
+    .then('./config/routes.js')
     .into(app)
+
 
 
 
@@ -18,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
 
-    console.log('backend no ar na porta 3000')
+    console.log('backend no ar na porta 3001')
 })
