@@ -9,7 +9,6 @@ module.exports = app => {
 
             res.send(docs)
 
-
         })
     })
 }

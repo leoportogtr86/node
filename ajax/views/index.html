@@ -17,6 +17,13 @@
 
     <button id="btn">Cadastrar</button>
 
+    <hr>
+
+    <h2>Dados das Músicas Salvas</h2>
+
+
+    <ul id="lista"></ul>
+
 
 
 
@@ -25,6 +32,33 @@
         let titulo = document.getElementById('titulo')
         let artista = document.getElementById('artista')
         let btn = document.getElementById('btn')
+        let lista = document.getElementById('lista')
+
+
+        axios.get('http://localhost:3000/visualizar').then((res) => {
+
+
+
+            let dados = res.data
+
+            dados.forEach(element => {
+
+                let item = document.createElement('li')
+
+                item.innerHTML = `Título: ${element.titulo} \nArtista: ${element.artista}`
+
+                lista.appendChild(item)
+
+            });
+
+
+
+
+
+
+
+
+        })
 
         btn.onclick = function () {
 
