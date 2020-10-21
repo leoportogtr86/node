@@ -6,7 +6,7 @@ module.exports = app => {
 
         Pergunta.findAll({ raw: true }).then((data) => {
 
-            res.send({ perguntas: data })
+            res.send(data)
 
 
         })
