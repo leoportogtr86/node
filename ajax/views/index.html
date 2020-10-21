@@ -41,6 +41,19 @@
         let lista = document.getElementById('lista')
 
 
+        function excluir(e) {
+
+
+
+            let titulo = e.getAttribute('data-titulo')
+            let artista = e.getAttribute('data-artista')
+
+            console.log(titulo)
+            console.log(artista)
+
+        }
+
+
 
 
         axios.get('http://localhost:3000/visualizar').then((res) => {
@@ -67,6 +80,12 @@
                 let editar = document.createElement('button')
                 editar.innerHTML = 'Editar'
                 deletar.innerHTML = 'Deletar'
+
+                deletar.onclick = function () {
+
+                    excluir(item)
+
+                }
 
 
 
