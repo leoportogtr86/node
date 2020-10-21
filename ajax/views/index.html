@@ -35,7 +35,12 @@
         let lista = document.getElementById('lista')
 
 
+
+
         axios.get('http://localhost:3000/visualizar').then((res) => {
+
+            console.log(titulo)
+            console.log(artista)
 
 
 
@@ -49,14 +54,10 @@
 
                 lista.appendChild(item)
 
+                item.setAttribute('data-titulo', element.titulo)
+                item.setAttribute('data-artista', element.artista)
+
             });
-
-
-
-
-
-
-
 
         })
 
