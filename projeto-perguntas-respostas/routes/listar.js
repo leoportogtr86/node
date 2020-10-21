@@ -2,14 +2,14 @@ const Pergunta = require('../database/models/pergunta')
 
 module.exports = app => {
 
-    app.get('/lista', (req, res)=>{
+    app.get('/lista', (req, res) => {
 
-       Pergunta.findAll().then((data)=>{
+        Pergunta.findAll({ raw: true }).then((data) => {
 
-        res.send(data)
+            res.send({ perguntas: data })
 
-           
-       })
+
+        })
     })
 
 }
