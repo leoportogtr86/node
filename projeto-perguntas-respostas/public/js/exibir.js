@@ -21,7 +21,7 @@ axios.get('http://localhost:3001/lista').then((res) => {
 
         <p class="text-light">${e.descricao}</p>
 
-        <button class="btn btn-success">Responder</button>
+        <button  class="btn"><a href="http://localhost:3001/perguntar">Responder</a></button>
             
         </div>
     </div>`

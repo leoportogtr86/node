@@ -4,7 +4,7 @@ module.exports = app => {
 
     app.post('/enviada', (req, res) => {
 
-        
+
 
         console.log(req.body.titulo)
         console.log(req.body.pergunta)
@@ -14,10 +14,10 @@ module.exports = app => {
             titulo: req.body.titulo,
             descricao: req.body.descricao
 
-        }).then(()=>{
+        }).then(() => {
 
             console.log('pergunta salva')
-            res.redirect('/')
+            res.redirect('/exibir')
 
 
         })
