@@ -7,7 +7,7 @@ module.exports = app => {
         Pergunta.findAll({
             raw: true, order: [
 
-                ['id', 'DESC']
+                ['id', 'DESC'] //ASC => crescente
 
             ]
         }).then((data) => {
